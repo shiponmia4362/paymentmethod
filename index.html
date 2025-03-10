@@ -20,11 +20,11 @@
             align-items: center;
             background: linear-gradient(135deg, #007bff, #0056b3);
             color: white;
-            padding: 20px;
-            font-size: 1.8em;
+            padding: 5px;
+            font-size: 12px;
             font-weight: bold;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 0 0 15px 15px;
+            border-radius: 0 0 10px 10px;
         }
         
         .product-container {
@@ -50,11 +50,11 @@
         .order-btn {
             background-color: #007bff;
             color: white;
-            padding: 10px;
-            font-size: 18px;
+            padding: 8px;
+            font-size: 15px;
             border-radius: 10px;
             transition: transform 0.3s;
-            box-shadow: 0 3px #0056b3;
+            box-shadow: 0 2px #0056b3;
         }
         .checkout-box {
             display: none;
@@ -63,9 +63,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background: rgb(154, 245, 7);
-            padding: 20px;
+            padding: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            border-radius: 20px;
+            border-radius: 10px;
             
         }
 
@@ -125,7 +125,7 @@
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcgVs2WBww3juCOl7hWa4UW1Jb8-kRme6DXRCnxF0dxsWMyp5nhW2w1xJkYYtL-PSOhy4VyQ0F7a0oszQl5XVLLpGC_awmSMK5B0MCSs4YzCsB7-uK_qvOHNdOMJ7-VFeGvaL7vkK1hRxxULBMS4dAgPlkYXbD_snJ7HNoJj08UAadgJHOXSAQzVPL9WH5/s1600/Screenshot_20250310-193027.jpg" alt="3 Pcs Saffron Soap Special Combo Pakage">
             </div>
             <div class="product-details">
-                <h2>3 Pcs Saffron Soap Special Combo Pakage</h2>
+                <h5>3 Pcs Saffron Soap Special Combo Pakage</h5>
                 <p><strong>Price:</strong> TK. <span id="product-price">500</span></p>
                 <button class="order-btn" onclick="openCheckout()">Order Now</button>
             </div>
@@ -151,17 +151,17 @@
     <div class="checkout-box" id="checkoutBox">
         <h3>Checkout</h3>
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcgVs2WBww3juCOl7hWa4UW1Jb8-kRme6DXRCnxF0dxsWMyp5nhW2w1xJkYYtL-PSOhy4VyQ0F7a0oszQl5XVLLpGC_awmSMK5B0MCSs4YzCsB7-uK_qvOHNdOMJ7-VFeGvaL7vkK1hRxxULBMS4dAgPlkYXbD_snJ7HNoJj08UAadgJHOXSAQzVPL9WH5/s1600/Screenshot_20250310-193027.jpg" width="100" alt="Product Image">
-        <p><strong>Product:</strong> 3 Pcs Saffron Soap Special Combo Pakage</p>
+        <p>3 Pcs Saffron Soap Special Combo Pakage</p>
         <p><strong>Price:</strong> TK. <span id="checkout-price">500</span></p>
         <label 
-style="font-size: 11px; font-weight: bold; color: #fff; background: linear-gradient(145deg, #080808, #0a0501); padding: 1px 3px; border-radius: 6px; display: inline-block; box-shadow: 0 1px #cc5200, 0 1px 2px rgba(0, 0, 0, 0.2); transition: all 0.3s ease-in-out;">
+style="font-size: 11px; font-weight: bold; color: #fff; background: linear-gradient(145deg, #080808, #0a0501); padding: 1px 2px; border-radius: 6px; display: inline-block; box-shadow: 0 1px #cc5200, 0 1px 2px rgba(0, 0, 0, 0.2); transition: all 0.3s ease-in-out;">
     Quantity:
 </label>
 
 
 
         <button onclick="updateQuantity(-1)" 
-style="font-size: 14px; font-weight: bold; color: white; background: linear-gradient(145deg, #dc3545, #c82333); padding: 2px 5px; border: none; border-radius: 5%; cursor: pointer; box-shadow: 0 5px #a71d2a, 0 2px 5px rgba(0, 0, 0, 0.2); transition: all 0.3s ease-in-out; position: relative; overflow: hidden;" 
+style="font-size: 10px; font-weight: bold; color: white; background: linear-gradient(145deg, #dc3545, #c82333); padding: 2px 5px; border: none; border-radius: 5%; cursor: pointer; box-shadow: 0 5px #a71d2a, 0 2px 5px rgba(0, 0, 0, 0.2); transition: all 0.3s ease-in-out; position: relative; overflow: hidden;" 
 onmouseover="this.style.boxShadow='0 5px #921723, 0 2px 5px rgba(0, 0, 0, 0.3)'" 
 onmouseout="this.style.boxShadow='0 2px #a71d2a, 0 2px 5px rgba(0, 0, 0, 0.2)'" 
 onmousedown="this.style.transform='translateY(4px)'" 
@@ -170,12 +170,12 @@ onmouseup="this.style.transform='translateY(0px)'">
 </button>
 
 <span id="quantity" 
-style="font-size: 12px; font-weight: bold; color: #fff; background: linear-gradient(145deg, #007bff, #0056b3); padding: 1px 3px; border-radius: 8px; display: inline-block; text-align: center; min-width: 20px; box-shadow: 0 4px #004494, 0 2px 4px rgba(0, 0, 0, 0.2); transition: all 0.3s ease-in-out;">
+style="font-size: 10px; font-weight: bold; color: #fff; background: linear-gradient(145deg, #007bff, #0056b3); padding: 1px 3px; border-radius: 8px; display: inline-block; text-align: center; min-width: 20px; box-shadow: 0 4px #004494, 0 2px 4px rgba(0, 0, 0, 0.2); transition: all 0.3s ease-in-out;">
     1
 </span>
 
         <button onclick="updateQuantity(1)" 
-style="font-size: 14px; font-weight: bold; color: white; background: linear-gradient(145deg, #28a745, #218838); padding: 2px 5px; border: none; border-radius: 5%; cursor: pointer; box-shadow: 0 5px #1c7430, 0 2px 5px rgba(0, 0, 0, 0.2); transition: all 0.3s ease-in-out; position: relative; overflow: hidden;" 
+style="font-size: 10px; font-weight: bold; color: white; background: linear-gradient(145deg, #28a745, #218838); padding: 2px 5px; border: none; border-radius: 5%; cursor: pointer; box-shadow: 0 5px #1c7430, 0 2px 5px rgba(0, 0, 0, 0.2); transition: all 0.3s ease-in-out; position: relative; overflow: hidden;" 
 onmouseover="this.style.boxShadow='0 5px #1b6f2d, 0 2px 5px rgba(0, 0, 0, 0.3)'" 
 onmouseout="this.style.boxShadow='0 2px #1c7430, 0 2px 5px rgba(0, 0, 0, 0.2)'" 
 onmousedown="this.style.transform='translateY(4px)'" 
