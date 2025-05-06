@@ -1,250 +1,1966 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products Store</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f0f0f0;
-            text-align: center;
-            padding-top: 80px;
-            padding-bottom: 60px;
-        }
-        
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #007bff, #0056b3);
-            color: white;
-            padding: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 0 0 5px 5px;
-            z-index: 1000;
-        }
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ShopBaseBD :: Products</title>    
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" type="image/x-icon" href="https://shopbasebd.com/public/apps/logo/favicon.png">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/vendors/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/vendors/fontawesome/css/all.min.css">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500&display=swap" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/common/css/customized_font.css">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/css/main.css">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/css/customizedV2.css">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/css/color.css">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/css/customized/cssv2.css">
 
-        .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(135deg, #0056b3, #003580);
-            color: white;
-            padding: 4px;
-            font-size: 10px;
-            border-radius: 5px 5px 0 0;
-            z-index: 1000;
-        }
-        
-        .product-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            padding: 10px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        
-        
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s;       
-        }
-        
-        .product-card:hover {
-            transform: rotateY(10deg) scale(1.05);
-        }
-        
-        .product-info {
-        margin-top: 5px; /* উপরের ছবির সাথে বেশি gap না রাখার জন্য */
-        padding: 10px 0;
-        }
-        
-        .product-info h3, .product-info h5 {
-        margin: 5px 0; /* নাম ও অন্যান্য অংশের মাঝে কম gap রাখার জন্য */
-        font-size: 1em;
-        }
-        
-        .product-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        
-       
-        
-        .price {
-         
-            color: #28a745;
-            font-weight: bold;
-       
-        margin: 3px 0; /* প্রাইজের gap কমানোর জন্য */
-        font-size: 1em;
-        }
-        
-        
-        .order-now {
-            background: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-   
-        margin-top: 5px; /* অর্ডার বাটনের উপরের gap কমানোর জন্য */
-        padding: 8px 12px;
-        font-size: 14px;
-        }
-        
-        
-        
-        
-        .order-now:hover {
-            background: #0056b3;
-        }
-        
-        .description {
-            margin-top: 0px;
-            font-size: 0.9em;
-            color: #555;
-        }
-        
-        
-        .chat-icons {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        }
-        
-        .chat-icons a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-        }
-        
-        .chat-icons a:hover {
-        transform: scale(1.1);
-        }
-        
-        .chat-icons img {
-        width: 30px;
-        height: 30px;
-        }
-        
-        
-        
-        @media (max-width: 768px) {
-            .product-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
-</head>
-<body>
+	<style type="text/css">
+		.card{
+			border: 0px!important;
+		}
+		.fixed-top {
+			//top: 6px;
+		}
+		.pagination {
+			margin-bottom: 0px;
+		}
+		.pagination .page-item.active .page-link {
+			background-color: green;
+			border-color: green;
+		}
+		.pagination-container {
+			overflow-x: auto;
+		}
+		.rating i{
+			font-size: 13px;
+			color: #ccc;
+		}
+		.rating .fa{
+			color: #FFC107;
+		}
+	</style>
+
+	
 
 
-    <div class="header">
-        <marquee>
-       
-        Welcome to Our Products Store! অর্ডার করলেই ডেলিভারি চার্জ ফ্রি !!! সারা বাংলাদেশে কোরিয়ার মাধ্যমে আমরা পণ্য পৌঁছে দিই।
-        </marquee>
-        </div>
-
-    <div class="product-container">
-        <div class="product-card">
-            <div class="product-image">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcgVs2WBww3juCOl7hWa4UW1Jb8-kRme6DXRCnxF0dxsWMyp5nhW2w1xJkYYtL-PSOhy4VyQ0F7a0oszQl5XVLLpGC_awmSMK5B0MCSs4YzCsB7-uK_qvOHNdOMJ7-VFeGvaL7vkK1hRxxULBMS4dAgPlkYXbD_snJ7HNoJj08UAadgJHOXSAQzVPL9WH5/s1600/Screenshot_20250310-193027.jpg" alt="Smartphone">
-                </div>
-            <div class="product-info">
-                <h5>3 Pcs Saffron Soap Best Combo Pakage</h5>
-                <p class="price">500 Tk</p>
-                <button class="order-now">
-                <a href="3 pices.html" target="_blank" style="color: white; text-decoration: none;">Order Now</a>
-                </button>
-            </div>
-        </div>
-
-
-
-        <div class="product-card">
-            <div class="product-image">
-               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiZFBcDm8UjrcYp2x42tOaw-RuQUGWKKKxWb0t6M59DLudAwXbCPb809e7aaP3-cUoZ7a1pFkui42QjDrWETFDx6dxktA3ccLEdL5fw7o97xxHSVPhJlhoEyzD99zpOUochojvMHmz3DQkTFv2oK6yr96pUjuDm6VxzSNWCE2aTMUXceNTyVT3xe5saSfO/s1600/Screenshot_20250311-113411.jpg" alt="Laptop">
-               </div>
-            <div class="product-info">
-                <h5>5 Pcs Saffron Soap Best Combo Pakage</h5>
-                <p class="price">700 Tk</p>
-                <button class="order-now">
-                    <a href="5 pices.html" target="_blank" style="color: white; text-decoration: none;">Order Now</a>
-                    </button>
-            </div>
-        </div>
-
-
-
-
-        <div class="product-card">
-            <div class="product-image">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgChXuiMHusxTYeP5wmRamHiPNvEY7x8Ezh_PR1Z21lBvg9zQPCqTTNdBcesJzRwpyyWXAWJ7NZL-ZqgI4oBxr5-fYJC6ibYzHgzzO54Hqy-wGOJvEe9dlHBJmpEmk3xW0eUYAxP9lt_F2haKX-oOa26GIdC1lBFMcHcW5Dh8l4IE79eLbWb4VcMAskX6S4/s1600/Screenshot_20250311-113411_3.jpg" alt="Headphones">
-            </div>
-            <div class="product-info">
-                <h5>10 Pcs Saffron Soap Best Combo Pakage</h5>
-                <p class="price">1200 Tk</p>
-                <button class="order-now">
-                    <a href="10 pices.html" target="_blank" style="color: white; text-decoration: none;">Order Now</a>
-                    </button>
-            </div>
-        </div>
+<style>
+	.custom-modal-overlay {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background: rgba(0,0,0,0.5);
+	  z-index: 1050;
+	  display: none;
+	  justify-content: center;
+	  align-items: center;
+	}
+  
+	.custom-modal-content {
+	  background: white;
+	  padding: 20px 25px;
+	  border-radius: 10px;
+	  width: 90%;
+	  max-width: 400px;
+	  position: relative;
+	  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	  text-align: center;
+	}
+  
+	.custom-modal-close {
+	  position: absolute;
+	  top: 8px;
+	  right: 12px;
+	  font-size: 18px;
+	  background: #ff4d4d;
+	  border: none;
+	  color: white;
+	  padding: 4px 8px;
+	  border-radius: 4px;
+	  cursor: pointer;
+	}
+  </style>
+  
 
 
 
 
 
 
-        <div class="product-card">
-            <div class="product-image">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhE8g50EjqPXJNyzYJabUb_uT4wkErg1BgRB7eP6ZgG3HCKjwFNLUtJpNCSky1ZZ7b-iWSVA1G5_fhVNxiM6PgW4Teg7ciJ4vZP_9Dnlg6L7_KgJXK1IlcPhuZ_j244zw4R5IyNU-qPLrMTKGsPY6AljKBVycpyTy4PPa6fY7SpJZwIbor-R4I3ig3pJQF/s1600/Screenshot_20250311-124236.jpg" alt="Smart Watch">
-            </div>
-            <div class="product-info">
-                <h5>Saffron +Osufi Serum Pakage</h5>
-                <p class="price">900 Tk</p>
-                <button class="order-now">
-                    <a href="shoap pices.html" target="_blank" style="color: white; text-decoration: none;">Order Now</a>
-                    </button>
-            </div>
-        </div>
-    </div>
 
-    <div class="footer">&copy; 2025 Our Product Store. All Rights Reserved.</div>
 
-<div class="chat-icons">
-    <a href="tel:+8801879990679" title="Call Us"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtx9x505OjxYoCNaMliZawri1CTM5b-D5EI34YALxAw8IohfXJO4k22LYeI6bLAcd-LrToSD_emUHAqeSl_MrDgvxK1YBiyb_SMQ8bt64VFlcV5uP6KZ0euU9JB4t_zut_p29QK0LZcezuHL83Id_n6d8JzDiJXVekkhfT1Lzmg_eXG2xnYWq-QXgTf5RO/s1600/C-Icon.png" alt="Call"></a>
-    <a href="https://wa.me/8801879990679" target="_blank" title="WhatsApp"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoRLeSdoXxtXGnHttuXtXC2aHgINtn2vvZcMEVfNNF8x99M0WAY-iP5XoF1vnhHZTQl_Z8ZGSIti8oQqVyWWyrIoVvlmi7nyqwszh58WampvdSONkFvvIbDK7kRlLu0P8xV0DrU77ZlAfHRivgJgGGN6l9MmmOJmk8-405jKIRrtcdyBMyDSWQVgy0grVF/s1600/W-icon.png" alt="WhatsApp"></a>
-    <a href="https://www.facebook.com/messages/t/440595169132134" target="_blank" title="Messenger"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj017RRNdY3hBeFN-9q8iygaGFIMEwPmd8jisuyQVx8bvyasLOtHtkhnX9aBcdZCcz0HShBzv8sAm-vshpXoLBjS59BLcGJHtZyNn7IbIBqZ8Gqp6BJ9I1KNBYkvm3A-_h-ycaWT6t1OphieTIpoo9TjrxyV2PtLO-ku-xIuFYchWbQDwihF8B-1dfInXxY/s1600/M-Icon.png" alt="Messenger"></a>
+
+	</head>
+
+<body id="main-container" class="default gradientssss">  
+	<!-- <div class="se-pre-con">
+		<div class="loader"></div>
+	</div>  --> 
+	<!-- <div style="background: #f85606; height: 6px;"></div> -->
+	<div id="header-fix" class="header fixed-top">
+		<div class="site-width">
+							<nav class="navbar navbar-expand-lg  p-0">
+					<div class="navbar-header  h-100 h4 mb-0 align-self-center logo-bar text-left"> 
+						<a href="https://shopbasebd.com/store" class="horizontal-logo text-left"> 
+							<span class="h5 font-weight-bold align-self-center mb-0 ml-auto pt-0 text-white">শপবেইজ বিডি</span> 
+						</a>               
+					</div>
+					<div class="navbar-header h4 mb-0 text-center h-100 collapse-menu-bar" id="menuButtonContainer">
+						<a href="#" class="sidebarCollapse" id="collapse"><i class="icon-menuss fa fa-bars" id="menuButtonIcon"></i></a>
+					</div>
+					<div class="pt-0">
+						<img src="https://shopbasebd.com/public/apps/logo/block-logo-icon-sm.png" style="margin-top:-8px; border-radius: 2px; height: 30px; width: 30px;">
+						<span style="color:#fff; font-size:18px;font-weight: 500;">&nbsp;SHOPBASE BD</span>
+					</div>
+					<div class="navbar-right ml-auto h-100">
+						<ul class="ml-auto p-0 m-0 list-unstyled d-flex top-icon h-100">						
+							<li class="dropdown align-self-center">
+								<span style="color: white; font-size: 17px; margin-top:2px; display: inline-block;">৳০</span>
+							</li>						
+							<li class="dropdown user-profile align-self-center d-inline-block">
+								<a href="#" class="nav-link py-0" data-toggle="dropdown" aria-expanded="false"> 
+									<div class="media">                                   
+										<img src="https://shopbasebd.com/public/assets/common/img/user.png" alt="" class="d-flex img-fluid rounded-circle" width="30">
+									</div>
+								</a>
+								<div class="dropdown-menu border dropdown-menu-right">
+
+									<a href="https://shopbasebd.com/store/logout" class="dropdown-item px-2 text-danger align-self-center d-flex">
+										<span class="icon-logout mr-2 h6  mb-0"></span> লগ আউট
+									</a>
+									<a href="https://shopbasebd.com/store/profile/change-password" class="dropdown-item px-2 text-danger align-self-center d-flex">
+										<span class="icon-lock mr-2 h6  mb-0"></span>
+										পাসওয়ার্ড পরিবর্তন
+									</a>
+								</div>
+							</li> 
+						</ul>
+					</div>
+				</nav>
+					</div>
+	</div>
+	<div class="sidebar">
+		<div class="site-width">
+			<ul id="side-menu" class="sidebar-menu pt-2">
+					
+				<li class="dropdown">
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/home">
+							<i class="fa fa-home"></i>হোম</a>
+						</li>
+					</ul>						
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/profile">
+							<i class="fas fa-user"></i>প্রোফাইল</a>
+						</li>
+					</ul>
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/new-post/all/all/1">
+							<i class="fab fa-facebook-square"></i>নতুন পোস্ট</a>
+						</li>
+					</ul>
+
+					<ul>
+						<li class="active"><a href="https://shopbasebd.com/store/products/all">
+							<i class="far fa-folder"></i>সকল প্রোডাক্ট</a>
+						</li>
+					</ul>
+					<ul>
+						<li class=""><a href="https://www.youtube.com/@ProductVideoCenter" target="_blank">
+							<i class="fas fa-video"></i>প্রোডাক্টের ভিডিও</a>
+						</li>
+					</ul>			
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/products/favorite/1">
+							<i class="far fa-heart"></i>ফেভরিট প্রোডাক্ট</a>
+						</li>
+					</ul>
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/products/stockout/1">
+							<i class="far fa-ban"></i>স্টকআউট প্রোডাক্ট</a>
+						</li>
+					</ul>					
+
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/orders">
+							<i class="fa fa-bars"></i>অর্ডার লিস্ট</a>
+						</li>
+					</ul>
+
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/active-orders/all">
+							<i class="fa fa-bars"></i>অ্যাক্টিভ অর্ডার</a>
+						</li>
+					</ul>
+
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/cart/view">
+							<i class="fa fa-shopping-basket"></i>কার্ট লিস্ট <span class="cart_total_quantity_item">0</span></a>
+						</li>
+					</ul>					
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/sales">
+							<i class="fas fa-chart-bar"></i>সেলস & প্রফিট</a>
+						</li>
+					</ul>
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/statement">
+							<i class="far fa-file-alt text-danger"></i>ব্যালেন্স স্টেটমেন্ট</a>
+						</li>
+					</ul>
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/bank-account">
+							<i class="fab fa-cc-mastercard"></i>অ্যাড একাউন্ট</a>
+						</li>
+					</ul>
+
+					<ul class="d-none">
+						<li class=""><a href="https://shopbasebd.com/store/payment">
+							<i class="far fa-credit-card"></i>টাকা উত্তোলন</a>
+						</li>
+					</ul>
+										<ul>
+						<li class="dropdown ">
+							<a href="#"><i class="far fa-credit-card"></i>টাকা উত্তোলন</a>
+							<ul class="sub-menu">
+								<li class="">
+									<a href="https://shopbasebd.com/store/withdraw/request">উত্তোলন করুন</a>
+								</li>
+								<li class="">
+									<a href="https://shopbasebd.com/store/withdraw/history">উত্তোলনের হিস্ট্রি</a>
+								</li>																
+							</ul>
+						</li>
+					</ul>
+
+
+
+					
+
+					<ul>
+						<li class=""><a href="https://shopbasebd.com/store/support-ticket">
+							<i class="far fa-comments"></i>সাপোর্ট টিকেট</a>
+						</li>
+					</ul>
+
+
+									</li>
+				
+
+
+
+
+
+			</ul>
+			<ol class="breadcrumb bg-transparent align-self-center m-0 p-0 ml-auto">
+				<li class="breadcrumb-item"><a href="#">Application</a></li>
+				<li class="breadcrumb-item active">Dashboard</li>
+			</ol>
+		</div>
+	</div>
+
+
+
+
+	<main>
+		<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/vendors/sweetalert/sweetalert.css">
+<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/vendors/toastr/toastr.min.css">
+<style type="text/css">
+	.product-page .product-part {
+		//box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+		border-radius: 3px;
+	}
+	.ProductimageContainer .img-fluid {
+		height: 140px !important;
+		width: 100%;
+		border-radius: 0px;
+		object-fit: cover;
+	}
+	.product-page .product-part {
+		padding: 7px 7px 3px 7px;
+	}
+	.product-price-table td {
+		padding: 0px 0px 4px 0px;
+		font-size: 13px !important;
+	}
+	.product-image {
+		opacity: 0;
+		transform: scale(0.9);
+		transition: all 0.5s ease-in-out;
+	}
+	.product-image.in-view {
+		opacity: 1;
+		transform: scale(1);
+	}
+</style>
+<div class="container-fluid site-width">
+	<div class="row">
+		<div class="col-md-12 product-page">
+			<div class="row">
+				<div class="col-12 col-md-12 mt-2 pl-4 pr-4">				
+					<div class="row" id="ajaxLoadProductArea">
+													<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_14.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_14.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Plaju Khimar Set" data-price="৯৬০" data-description="এটি একটি উন্নতমানের হিজাব সেট, সব বয়সের জন্য উপযোগী।">Info</button>
+														<button 
+  class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 send-whatsapp" 
+  data-id="19299" 
+  data-name="Plaju Khimar Set" 
+  data-price="960" 
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_14.jpg" 
+  style="width: 48%!important">
+  Buy Now<i class="fas fa-heart text-success"></i>
+</button>		  
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19298">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_13.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_13.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+														<button 
+														class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 send-whatsapp" 
+														data-id="19299" 
+														data-name="Plaju Khimar Set" 
+														data-price="960" 
+														data-image="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_13.jpg" 
+														style="width: 48%!important">
+														Buy<i class="fas fa-heart text-success"></i>
+													  </button>
+													  
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19297">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_12.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_12.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19297" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19296">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_11.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_11.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19296" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19295">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_10.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_10.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19295" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19294">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_9.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_9.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19294" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19293">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_8.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_8.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19293" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19292">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_7.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_7.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19292" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19291">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_6.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_6.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19291" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19290">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_5.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_5.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19290" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19289">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_4.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_4.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19289" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19288">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_3.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19288" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19287">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_2.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19287" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/19286">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1745312556_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1745312556_L_1.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="19286" data-type="0" style="width: 48%!important">Buy<i class="fas fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18104">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_13.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_13.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18104"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18103">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_12.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_12.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18103"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18101">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_10.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_10.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18101"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18100">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_9.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_9.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18100"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18098">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_7.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_7.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18098"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18097">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_6.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_6.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18097"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18096">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_5.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_5.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18096"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18095">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_4.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_4.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18095"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18094">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_3.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18094"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18093">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_2.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18093"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18092">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989791_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Salah long khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৮৫০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989791_L_1.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18092"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18091">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_16.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_16.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18091"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18090">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_15.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_15.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18090"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18089">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_14.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_14.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18089"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18088">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_13.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_13.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18088"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18086">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_11.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_11.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18086"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18085">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_10.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_10.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18085"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18084">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_9.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_9.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18084"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18083">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_8.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_8.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18083"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18082">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_7.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_7.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18082"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18081">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_6.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_6.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18081"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18079">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_4.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_4.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18079"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18078">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_3.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18078"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18077">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_2.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18077"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/18076">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1739989433_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1739989433_L_1.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="18076"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/17274">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1738434157_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Soft Linen Khimar</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৬৯০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1738434157_L_1.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="17274"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/17255">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1738432733_S_20.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1738432733_L_20.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="17255"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/17252">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1738432733_S_17.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1738432733_L_17.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="17252"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/17249">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1738432733_S_14.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1738432733_L_14.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="17249"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/17244">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1738432733_S_9.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1738432733_L_9.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="17244"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/17241">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1738432733_S_6.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1738432733_L_6.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="17241"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/17239">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1738432733_S_4.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1738432733_L_4.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="17239"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/17238">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1738432733_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1738432733_L_3.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="17238"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/store/products/details/17236">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1738432733_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Plaju Khimar Set</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">৯৬০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<a href="https://shopbasebd.com/public/uploads/shop/products/1738432733_L_1.jpg" class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1" download style="width: 48%!important">download<i class="fa fa-download text-success"></i></a>
+																													<button class="btn btn-sm btn-light w-100 pt-1 text-center pl-1 pr-1 favorite" data-id="17236"  data-type="1" style="width: 48%!important">Buy<i class="far fa-heart text-success"></i></button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+												</div>
+				</div>
+				<div class="col-md-12 text-center mt-2">
+					<div class="card p-3">
+						<div class="row">							
+							<div class="col-12 pt-2">
+																									<button class="btn btn-success" disabled><i class="fa fa-angle-double-left"></i> Prev</button>
+																									<button class="btn btn-success" disabled>Next <i class="fa fa-angle-double-right"></i></button>
+																
+								
+							</div>
+							<div class="col-md-12 text-center pt-2">
+								Page 1 of 1
+							</div>							
+						</div>
+					</div>					
+				</div>
+				<div class="col-md-12 mt-3 d-none">
+										<nav aria-label="Page navigation example">
+						<ul class="pagination">
+							<li class="page-item">
+																	<a class="page-link" href="javascript:void(0)" aria-label="Previous">
+										<span aria-hidden="true">«</span>
+										<span class="sr-only">Previous</span>
+									</a>
+															</li>
+
+																<li class="page-item active"><a class="page-link" href="https://shopbasebd.com/store/products/68/1">1</a></li>
+									
+							<li class="page-item">	
+																	<a disabled class="page-link" href="javascript:void(0)" aria-label="Next">
+										<span aria-hidden="true">»</span>
+										<span class="sr-only">Next</span>
+									</a>			
+															</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-12 mt-5 mb-5"></div>
+			</div>
+		</div>
+	</div>    
 </div>
+	</main>
+	
+			<footer class="site-footer foot-menu">
+			<div class="row">
+				<div class="col-3 foot-menu-item">
+					<a href="https://shopbasebd.com/store/home" class="">
+						<i class="fa fa-home"></i>
+						<p>হোম</p>
+					</a>				
+				</div>	
+				<div class="col-3 foot-menu-item">
+					<a href="https://shopbasebd.com/store/new-post/all/all/1" class="">
+						<i class="fab fa-facebook-square"></i>
+						<p>পোস্ট</p>
+					</a>				
+				</div>
+				<div class="col-3 foot-menu-item">
+					<a href="https://shopbasebd.com/store/products/all" class="active-mn">
+						<i class="far fa-folder"></i>
+						<p>প্রোডাক্ট</p>
+					</a>				
+				</div>
+				<div class="col-3 foot-menu-item">
+					<a href="https://shopbasebd.com/store/inbox" class="">
+						<i class="fas fa-envelope-open-text"></i>
+						<p>ইনবক্স</p>
+					</a>				
+				</div>
+
+				<!-- <div class="col-3 foot-menu-item">
+					<a href="https://shopbasebd.com/store/products/search/image" class="">
+						<i class="fas fa-search"></i>
+						<p>সার্চ</p>
+					</a>				
+				</div>  -->
+
+				<!-- <div class="col-3 foot-menu-item">
+					<a href="https://shopbasebd.com/store/video-post/all" class="">
+						<i class="fas fa-video"></i>
+						<p>ভিডিও</p>
+					</a>				
+				</div> -->
+				
+				<!-- <div class="col-3 foot-menu-item">
+					<a href="https://shopbasebd.com/store/products/favorite/1" class="">
+						<i class="far fa-heart"></i>
+						<p>ফেভরিট</p>
+					</a>				
+				</div> -->
+			<!-- <div class="col-3 foot-menu-item">
+				<a href="https://shopbasebd.com/store/orders" class="">
+					<i class="fa fa-bars"></i>
+					<p>অর্ডার</p>
+				</a>				
+			</div> -->
+			<!-- <div class="col-3 foot-menu-item">
+				<a href="https://shopbasebd.com/store/cart/checkout" class="">
+					<i class="fa fa-shopping-basket"></i>
+					<p>কার্ট <span class="cart_total_quantity_item">0</span></p>
+				</a>				
+			</div> -->
+
+		</div>
+	</footer>
+
+<script src="https://shopbasebd.com/public/assets/store/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script src="https://shopbasebd.com/public/assets/store/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://shopbasebd.com/public/assets/store/vendors/slimscroll/jquery.slimscroll.min.js"></script> 
+<script src="https://shopbasebd.com/public/assets/store/js/app.js"></script> 
+<script src="https://shopbasebd.com/public/assets/store/vendors/toastr/toastr.min.js"></script>
+<script src="https://shopbasebd.com/public/assets/store/vendors/toastr/toastr.script.js"></script>
+<script type="text/javascript">	
+	$(document).on('click', '.favorite', function() 
+	{ 
+		var id = $(this).attr("data-id");
+		var type = $(this).attr("data-type");
+		$.get('https://shopbasebd.com/store/addToFavorite/'+id+'/'+type, function(data) {
+			if(type==1){
+				toastr.success("Added to favorite list");
+			}else{
+				toastr.warning("Removed from favorite list");
+			}								
+			setTimeout(function(){ 
+				location.reload();
+			}, 500);
+		});
+	});	
+
+	document.addEventListener("DOMContentLoaded", function () {
+		const images = document.querySelectorAll(".product-image");
+
+		function checkVisibility() {
+			images.forEach((img) => {
+				const rect = img.getBoundingClientRect();
+				if (rect.top < window.innerHeight && rect.bottom > 0) {
+					img.classList.add("in-view");
+				}
+			});
+		}
+
+		window.addEventListener("scroll", checkVisibility);
+		checkVisibility(); 
+	});
+</script>
+<script type="text/javascript">
+		/*$(document).ready(function() { 
+			$(".multiple").select2({
+				multiple:true,
+				placeholder: "Select one"
+			});
+		});*/
+	$("#success-message").hide();
+	$("#warning-message").hide();
+	load_cart_data();
+	function load_cart_data(){
+		$.get("https://shopbasebd.com/store/cart/load/info", function(data) {
+			var data = $.parseJSON(data);
+			$('.cart_total_quantity_item').text(data.total_item);
+			$('.cart_total_amount').text(data.cart_total_amount);
+			$('.side_cart_items').html(data.item_list);
+		});
+	}
+</script>
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+	  const buttons = document.querySelectorAll(".send-whatsapp");
+  
+	  buttons.forEach(function (button) {
+		button.addEventListener("click", function () {
+		  const name = this.getAttribute("data-name");
+		  const price = this.getAttribute("data-price");
+		  const image = this.getAttribute("data-image");
+  
+		  const message = `🛍️ প্রোডাক্ট অর্ডার করতে চাই\n\n📦 প্রোডাক্ট: ${name}\n💰 প্রাইস: ${price} টাকা\n🖼️ ছবি: ${image}`;
+  
+		  const whatsappNumber = "01879990679";
+		  const whatsappUrl = `https://wa.me/88${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  
+		  window.open(whatsappUrl, '_blank');
+		});
+	  });
+	});
+  </script>
+  
+
+
+
+
+
+
+  <div class="custom-modal-overlay" id="customModal">
+	<div class="custom-modal-content">
+	  <button class="custom-modal-close" id="customModalClose">X</button>
+	  <h5 id="modalProductName"></h5>
+	  <p id="modalProductPrice"></p>
+	  <p id="modalProductDescription"></p>
+	</div>
+  </div>
+  
+
+
+
+
+
+
+  <script>
+	(function () {
+	  document.addEventListener("DOMContentLoaded", function () {
+		const infoButtons = document.querySelectorAll('.custom-info-btn');
+		const modal = document.getElementById('customModal');
+		const closeModal = document.getElementById('customModalClose');
+	
+		const nameBox = document.getElementById('modalProductName');
+		const priceBox = document.getElementById('modalProductPrice');
+		const descBox = document.getElementById('modalProductDescription');
+	
+		infoButtons.forEach(btn => {
+		  btn.addEventListener('click', () => {
+			nameBox.textContent = btn.getAttribute('data-name');
+			priceBox.textContent = 'প্রাইস: ' + btn.getAttribute('data-price') + ' টাকা';
+			descBox.textContent = btn.getAttribute('data-description');
+			modal.style.display = 'flex';
+		  });
+		});
+	
+		closeModal.addEventListener('click', () => {
+		  modal.style.display = 'none';
+		});
+	
+		window.addEventListener('click', function (e) {
+		  if (e.target === modal) {
+			modal.style.display = 'none';
+		  }
+		});
+	  });
+	})();
+	</script>
+	
+
+
+
+
+
+
+
 
 
 </body>
