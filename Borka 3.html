@@ -1,0 +1,3211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Online Market :: Products</title>    
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPHRv6_5CXSmXYRK7895RPFmz96_ojqKvb5rqpZEesMhcNRAYNtBhsCvgh8iLfL74ssvGRGhjsIpgHEn7ZufIqKQzb9P2D3koKZueSWKE3Y0Jqp5QEPkEmds9qMRIEf4HdnF1Nr6cACQ4v9wVBPdN0a5ZEZ7C9PeE2HVW41_JWEjoCjXXGveFTXDPiUfGL/s1600/Favicon-icon.png">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/vendors/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/vendors/fontawesome/css/all.min.css">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500&display=swap" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/common/css/customized_font.css">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/css/main.css">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/css/customizedV2.css">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/css/color.css">
+	<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/css/customized/cssv2.css">
+
+	<style type="text/css">
+		.card{
+			border: 0px!important;
+		}
+		.fixed-top {
+			//top: 6px;
+		}
+		.pagination {
+			margin-bottom: 0px;
+		}
+		.pagination .page-item.active .page-link {
+			background-color: green;
+			border-color: green;
+		}
+		.pagination-container {
+			overflow-x: auto;
+		}
+		.rating i{
+			font-size: 13px;
+			color: #ccc;
+		}
+		.rating .fa{
+			color: #FFC107;
+		}
+
+
+
+
+
+                                                                                         
+        .chat-icons {
+            position: fixed;
+            bottom: 60px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .chat-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .chat-icons a:hover {
+            transform: scale(1.1);
+        }
+        
+        .chat-icons img {
+            width: 30px;
+            height: 30px;
+        }
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+
+	
+
+
+<style>
+	.custom-modal-overlay {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background: rgba(0,0,0,0.5);
+	  z-index: 1050;
+	  display: none;
+	  justify-content: center;
+	  align-items: center;
+	}
+  
+	.custom-modal-content {
+	  background: white;
+	  padding: 20px 25px;
+	  border-radius: 10px;
+	  width: 90%;
+	  max-width: 400px;
+	  position: relative;
+	  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	  text-align: center;
+	}
+  
+	.custom-modal-close {
+	  position: absolute;
+	  top: 8px;
+	  right: 12px;
+	  font-size: 18px;
+	  background: #ff4d4d;
+	  border: none;
+	  color: white;
+	  padding: 4px 8px;
+	  border-radius: 4px;
+	  cursor: pointer;
+	}
+  </style>
+  
+
+
+
+
+
+
+
+
+
+	</head>
+
+<body id="main-container" class="default gradientssss">  
+	<!-- <div class="se-pre-con">
+		<div class="loader"></div>
+	</div>  --> 
+	<!-- <div style="background: #f85606; height: 6px;"></div> -->
+	<div id="header-fix" class="header fixed-top">
+		<div class="site-width">
+							<nav class="navbar navbar-expand-lg  p-0">
+					<div class="navbar-header  h-100 h4 mb-0 align-self-center logo-bar text-left"> 
+						<a href="#" class="horizontal-logo text-left"> 
+							<span class="h5 font-weight-bold align-self-center mb-0 ml-auto pt-0 text-white">লিস্ট</span> 
+						</a>               
+					</div>
+
+
+					<!--Menu Icon-->
+					<div class="navbar-header h4 mb-0 text-center h-100 collapse-menu-bar" id="menuButtonContainer">
+						<a href="#" class="sidebarCollapse" id="collapse"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png"
+							alt="Menu"
+							id="menuButtonIcon"
+							style="width: 24px; height: 24px; margin-top: -10px; cursor: pointer;" />
+					   </a>
+					</div>
+                           <!--Menu Icon-->
+
+
+					<div class="pt-0">
+						<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBioVsJTTLdD5T9LKZMVx1ywSWVcIZWjAY3_M_WYx13w-MIn3GXvBQbb0XCjz2uvPP63iL0pv9duGgdji_658bBNJkapu5a916mE6R6f54QdtyOEScRfQD98BfaMhUj1UCzWW90lmLI582OYNAbC30CJEio-52LyLJmb5WqKGXP0hTe79T2ai2SzWwFswJ/s1600/Online-Market-Logo.png" style="margin-top:-8px; border-radius: 2px; height: 30px; width: 30px;">
+						<span style="color:#fff; font-size:18px;font-weight: 500;">&nbsp;Online Market</span>
+					</div>
+					<div class="navbar-right ml-auto h-100">
+						<ul class="ml-auto p-0 m-0 list-unstyled d-flex top-icon h-100">						
+							<li class="dropdown align-self-center">
+								<span style="color: white; font-size: 17px; margin-top:2px; display: inline-block;">৳০</span>
+							</li>						
+							<li class="dropdown user-profile align-self-center d-inline-block">
+								<a href="#" class="nav-link py-0" data-toggle="dropdown" aria-expanded="false"> 
+									<div class="media">                                   
+										<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3vYlyJcDmivb05GPgTMdGQMtXsZXLurl955zLzO0cAt1r1_wJyKNO9U36hlw9cpuEAGY6wnweTmDIiQ2aE3w6rf7RO-wyrHQR7rlL0Wm2vhZ99OqpnQVYu4FlhBYCCHoWAc6l0qTwhkIGQccLFGhbWSshBqRYmk-jGnjIkVNcedyvOTFUAjb_k3lNTJlp/s1600/Man%20and%20Women%20Shopping.png" alt="" class="d-flex img-fluid rounded-circle" width="40">
+									</div>
+								</a>
+								<div class="dropdown-menu border dropdown-menu-right">
+
+									<a href="#" class="dropdown-item px-2 text-danger align-self-center d-flex">
+										<span class="icon-logout mr-2 h6  mb-0"></span> লগ আউট
+									</a>
+									<a href="#" class="dropdown-item px-2 text-danger align-self-center d-flex">
+										<span class="icon-lock mr-2 h6  mb-0"></span>
+										পাসওয়ার্ড পরিবর্তন
+									</a>
+								</div>
+							</li> 
+						</ul>
+					</div>
+				</nav>
+					</div>
+	</div>
+
+
+
+
+<!--sidebar/Start-->
+
+<div class="sidebar">
+	<div class="site-width">
+
+
+
+
+
+
+		<!--Women Home/S-->
+
+	  <ul id="side-menu" class="sidebar-menu pt-2">
+		<li class="dropdown">
+  
+		  <ul>
+			<li><a href="Khimar.html">
+			  <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home" style="width: 20px; height: 20px; margin-right: 6px; margin-bottom: -3px;">হোম</a>
+			</li>
+		  </ul>
+                                    	<!--Women Home/E-->
+
+
+<!--Women Fashion/S-->
+		  <ul>
+			<li class="dropdown">
+			  <a href="#">
+				<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgokeROQfIFajmDqo9PT2KevhR5I6D4Gqd6eh6s8l7-xXeLzx8MtzPFvNeaiQXBOKzYHLy6q2SnmV-T5vksFZIWA7c4EWMSkdV8Icv0LpOsVAMcRVavgwLoRxJ_skcWHTkgLJZvkZyvyhwJBzpcUIw_wgQRMzdEYEIb6G4uAD0WTQ71YlOqc7pKTM11A6nj/s1600/1746281247_L_7__1_-removebg-preview.png" alt="Withdraw" style="width: 20px; height: 20px; margin-right: 6px; margin-bottom: -3px;">মহিলাদের পোশাক</a>
+			  <ul class="sub-menu">
+				<li><a href="Hijab.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbQvRlxWelB13I3Cesx2pWBagLWo17zVehO1Q5BNVfaYjnodrXZJWOkdJJ2jLVpGSrA_MbEQpkLS3N1auilErrO3-eiR7Ks2i_BNgpvWwmbN8Rv_udoct9MNe2pf-J89f_NALaX9bUU6lF-OkrQushUy9SVupTiT1yavroOgZmvgAG3afrxVbIBfv0Nxii/s1600/Hijab%20&amp;%20Nikab.jpg" alt="New Post" style="width: 25px; height: 25px; margin-right: 6px; margin-bottom: -3px;">হিজাব</a></li>
+				<li><a href="Khimar.html"> <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgufhFrdmvsfCIp2PJupqt-abfrqIZ6OPuh5NN6Ud-6KpGYtyeafPtvpZtOe2baRzeyhJ2_NcLXNKLzEBBniGd93Vcsn_2EIEclSYxg7kfaUhCOuSYhoq18W09Juzdde_6Xo19EQ9OjiOkPpo0XZOD5et75_RiILvP0bF5tAsf1x3YxqaAH1ZeAbK-lf-Yi/s1600/Khimar.png" alt="Products" style="width: 25px; height: 25px; margin-right: 6px; margin-bottom: -3px;">খিমার</a></li>
+				<li><a href="Borka 1.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTh6ylKPGD9OH_w1QDm2gTFWkF12TkZTXtbZCNXhaoPmJslWas7mfR2tvoBsb62UKwK8Wpozr5zqCKFOsLiK2gYI7MbY_GVJTrQXCc4MfwHj3PgTJtO8QDKbf7LV3fPsAzn6vEXGWexWlAVpansVTqipwoArbFhfkswou73qsloW0dYd_mSOPZOPN-iN8Z/s1600/Borka%20image.png" alt="Withdraw" style="width: 20px; height: 20px; margin-right: 6px; margin-bottom: -3px;">বোরকা</a></li>
+			  </ul>
+			</li>
+		  </ul>
+
+                                <!--Women Fashion/E-->
+
+
+
+
+
+
+  
+
+
+<!--Baby Fashion/S-->
+<ul>
+	<li class="dropdown">
+	  <a href="#">
+		<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiI-BC6JU8HnckeRt8n8oN2BsUZiFTA6HQO0QhzdG3wDmT3FxolaFT6Ua8oKo30IN0rLA8jsdXf5fPgJFXiPAOvSTC0v_4U4hw2DRqKT6R2fjFpOYe9QIn8zbe8n1m2cZvzlsuB6LjvNgPcC2bO1l8bhsDk-urPjRhyphenhyphen9LC5z7m8Dsau_wdZzztgEarITyRQ/s1600/scategory-1738403810-removebg-preview.png" alt="Withdraw" style="width: 20px; height: 20px; margin-right: 6px; margin-bottom: -3px;"> বেবি আইটেম  </a>
+	  <ul class="sub-menu">
+		<li><a href="Baby Borka.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8VHSNm0qntNFuD5S1suQRU1Ye0BUz1QpWfI1wTL_UzPXmoPCIRHBKNmNPx0Dj0-JUlHQ_btPJMVfwc4e-khBWcjqIOUwnceeYjFvKnZY2aQiwFLomY6dIuQIyYWOX_hyPODG6KBhYqbEz65LC2jh6sqXC50F8IfwXxekNzJ2sCl5N90bzZWBBZP5I5Fit/s1600/Baby%20Borka.png" alt="New Post" style="width: 25px; height: 25px; margin-right: 6px; margin-bottom: -3px;">বেবি বোরকা</a></li>
+		</ul>
+	</li>
+  </ul>
+
+						<!--Baby Fashion/E-->
+
+
+
+
+  
+	  <ol class="breadcrumb bg-transparent align-self-center m-0 p-0 ml-auto">
+
+		<li class="breadcrumb-item"><a href="#">Application</a></li>
+		<li class="breadcrumb-item active">Dashboard</li>
+	  </ol>
+	</div>
+  </div>
+  
+		<!--sidebar/End-->
+
+
+	<main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/vendors/sweetalert/sweetalert.css">
+<link rel="stylesheet" href="https://shopbasebd.com/public/assets/store/vendors/toastr/toastr.min.css">
+<style type="text/css">
+	.product-page .product-part {
+		//box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+		border-radius: 3px;
+	}
+	.ProductimageContainer .img-fluid {
+		height: 140px !important;
+		width: 100%;
+		border-radius: 0px;
+		object-fit: cover;
+	}
+	.product-page .product-part {
+		padding: 7px 7px 3px 7px;
+	}
+	.product-price-table td {
+		padding: 0px 0px 4px 0px;
+		font-size: 13px !important;
+	}
+	.product-image {
+		opacity: 0;
+		transform: scale(0.9);
+		transition: all 0.5s ease-in-out;
+	}
+	.product-image.in-view {
+		opacity: 1;
+		transform: scale(1);
+	}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid site-width">
+	<div class="row">
+		<div class="col-md-12 product-page">
+			<div class="row">
+				<div class="col-12 col-md-12 mt-2 pl-4 pr-4">				
+					<div class="row" id="ajaxLoadProductArea">
+													<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720879623_S_3.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720879623_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai cherry borka (only borka)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১০৩০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai cherry borka (only borka)" data-price="১০৩০" data-description="Dubai cherry borka (only borka)।
+														
+
+
+
+
+
+
+
+
+
+
+Fabrics dubai cherry।
+No hijab।
+Size available।
+Bode free।
+Long 52/54/56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai cherry borka (only borka)"
+  data-price="১০৩০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720879623_S_3.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+                                                    <!--Product 1/E-->
+
+
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720879623_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720879623_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai cherry borka (only borka)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১০৩০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai cherry borka (only borka)" data-price="১০৩০" data-description="Dubai cherry borka (only borka)।
+														
+
+
+
+
+
+
+
+
+
+
+Fabrics dubai cherry।
+No hijab।
+Size available।
+Bode free।
+Long 52/54/56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai cherry borka (only borka)"
+  data-price="১০৩০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720879623_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+                                                    <!--Product 2/E-->
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720879623_S_1.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720879623_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai cherry borka (only borka)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১০৩০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai cherry borka (only borka)" data-price="১০৩০" data-description="Dubai cherry borka (only borka)।
+														
+
+
+
+
+
+
+
+
+
+
+Fabrics dubai cherry।
+No hijab।
+Size available।
+Bode free।
+Long 52/54/56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai cherry borka (only borka)"
+  data-price="১০৩০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720879623_S_1.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 3/E-->
+
+
+
+
+
+
+
+
+
+							
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720367862_S_3.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720367862_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Stone Borka with Hijab</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১৬৪০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Stone Borka with Hijab" data-price="১৬৪০" data-description="Premium Stone Borka with Hijab।
+														
+
+
+
+
+
+
+
+
+
+
+বোরকার সাথে থাকবে হিজাব ।
+ফেব্রিক্সঃ দুবাই চেরি।
+ডিজাইনঃ স্টোন বসানো।
+কোয়ালিটিঃ প্রিমিয়াম।
+কালার গ্যারান্টি।
+সাইজ বডি: 46 পর্জন্ত।
+লং: 52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Stone Borka with Hijab"
+  data-price="১৬৪০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720367862_S_3.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+                                                    <!--Product 4/E-->
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720367862_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720367862_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Stone Borka with Hijab</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১৬৪০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Stone Borka with Hijab" data-price="১৬৪০" data-description="Premium Stone Borka with Hijab।
+														
+
+
+
+
+
+
+
+
+
+
+বোরকার সাথে থাকবে হিজাব ।
+ফেব্রিক্সঃ দুবাই চেরি।
+ডিজাইনঃ স্টোন বসানো।
+কোয়ালিটিঃ প্রিমিয়াম।
+কালার গ্যারান্টি।
+সাইজ বডি: 46 পর্জন্ত।
+লং: 52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Stone Borka with Hijab"
+  data-price="১৬৪০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720367862_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 5/E-->
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720367788_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720367788_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Stone Borka with Hijab</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১৫৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+															<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Stone Borka with Hijab" data-price="১৫৭০" data-description="Premium Stone Borka with Hijab।
+														
+
+
+
+
+
+
+
+
+
+
+
+বোরকা সাথে থাকবে হিজাব ।
+ফেব্রিক্সঃ দুবাই চেরি।
+ডিজাইনঃ স্টোন বসানো।
+কোয়ালিটিঃ প্রিমিয়াম।
+কালার গ্যারান্টি।
+
+সাইজ বডি: 46 পর্জন্ত।
+লং: 52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Stone Borka with Hijab"
+  data-price="১৫৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720367788_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 6/E-->
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720367788_S_1.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720367788_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Stone Borka with Hijab</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১৫৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+															<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Stone Borka with Hijab" data-price="১৫৭০" data-description="Premium Stone Borka with Hijab।
+														
+
+
+
+
+
+
+
+
+
+
+
+বোরকা সাথে থাকবে হিজাব ।
+ফেব্রিক্সঃ দুবাই চেরি।
+ডিজাইনঃ স্টোন বসানো।
+কোয়ালিটিঃ প্রিমিয়াম।
+কালার গ্যারান্টি।
+
+সাইজ বডি: 46 পর্জন্ত।
+লং: 52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Stone Borka with Hijab"
+  data-price="১৫৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720367788_S_1.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 7/E-->
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_4.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_4.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Borka (Only Borka, No Hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১০৩০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Borka (Only Borka, No Hijab)" data-price="১০৩০" data-description="Dubai Cherry Borka (Only Borka, No Hijab)।
+														
+Fabrics Dubai cherry।
+Size available।
+Long 52,54,56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Borka (Only Borka, No Hijab)"
+  data-price="১০৩০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_4.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 8/E-->
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_3.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Borka (Only Borka, No Hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১০৩০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Borka (Only Borka, No Hijab)" data-price="১০৩০" data-description="Dubai Cherry Borka (Only Borka, No Hijab)।
+														
+Fabrics Dubai cherry।
+Size available।
+Long 52,54,56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Borka (Only Borka, No Hijab)"
+  data-price="১০৩০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_3.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 9/E-->
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Borka (Only Borka, No Hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১০৩০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+													<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Borka (Only Borka, No Hijab)" data-price="১০৩০" data-description="Dubai Cherry Borka (Only Borka, No Hijab)।
+														
+Fabrics Dubai cherry।
+Size available।
+Long 52,54,56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Borka (Only Borka, No Hijab)"
+  data-price="১০৩০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 10/E-->
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_1.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Borka (Only Borka, No Hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১০৩০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Borka (Only Borka, No Hijab)" data-price="১০৩০" data-description="Dubai Cherry Borka (Only Borka, No Hijab)।
+														
+Fabrics Dubai cherry।
+Size available।
+Long 52,54,56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Borka (Only Borka, No Hijab)"
+  data-price="১০৩০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1720367482_S_1.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 11/E-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717663463_S_3.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717663463_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Stone Borka with Hijab</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১৫৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Stone Borka with Hijab" data-price="১৫৭০" data-description="Premium Stone Borka with Hijab।
+														
+
+
+বোরকা সাথে থাকবে হিজাব।
+ফেব্রিক্সঃ দুবাই চেরি।
+ডিজাইনঃ স্টোন বসানো।
+কোয়ালিটিঃ প্রিমিয়াম।
+কালার গ্যারান্টি।
+
+সাইজ বডি: 46 পর্জন্ত।
+লং: 52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Stone Borka with Hijab"
+  data-price="১৫৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717663463_S_3.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+                                                    <!--Product 12/E-->
+
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717663463_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717663463_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Stone Borka with Hijab</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১৫৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Stone Borka with Hijab" data-price="১৫৭০" data-description="Premium Stone Borka with Hijab।
+														
+
+
+বোরকা সাথে থাকবে হিজাব।
+ফেব্রিক্সঃ দুবাই চেরি।
+ডিজাইনঃ স্টোন বসানো।
+কোয়ালিটিঃ প্রিমিয়াম।
+কালার গ্যারান্টি।
+
+সাইজ বডি: 46 পর্জন্ত।
+লং: 52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Stone Borka with Hijab"
+  data-price="১৫৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717663463_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 13/E-->
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717663463_S_1.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717663463_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Stone Borka with Hijab</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১৫৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Stone Borka with Hijab" data-price="১৫৭০" data-description="Premium Stone Borka with Hijab।
+														
+
+
+বোরকা সাথে থাকবে হিজাব।
+ফেব্রিক্সঃ দুবাই চেরি।
+ডিজাইনঃ স্টোন বসানো।
+কোয়ালিটিঃ প্রিমিয়াম।
+কালার গ্যারান্টি।
+
+সাইজ বডি: 46 পর্জন্ত।
+লং: 52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Stone Borka with Hijab"
+  data-price="১৫৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717663463_S_1.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+                                                    <!--Product 14/E-->
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717663220_S_3.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717663220_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Stone Borka with Hijab</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১৬৪০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Stone Borka with Hijab" data-price="১৬৪০" data-description="Premium Stone Borka with Hijab।
+														
+
+
+
+বোরকা সাথে থাকবে জিহাব।
+ফেব্রিক্সঃ দুবাই চেরি।
+ডিজাইনঃ স্টোন বসানো।
+কোয়ালিটিঃ প্রিমিয়াম।
+কালার গ্যারান্টি।
+সাইজ বডি : 46 পর্জন্ত।
+লং: 52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Stone Borka with Hijab"
+  data-price="১৬৪০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717663220_S_3.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+                                                    <!--Product 15/E-->
+
+
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717663220_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717663220_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Stone Borka with Hijab</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১৬৪০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Stone Borka with Hijab" data-price="১৬৪০" data-description="Premium Stone Borka with Hijab।
+														
+
+
+
+বোরকা সাথে থাকবে জিহাব।
+ফেব্রিক্সঃ দুবাই চেরি।
+ডিজাইনঃ স্টোন বসানো।
+কোয়ালিটিঃ প্রিমিয়াম।
+কালার গ্যারান্টি।
+সাইজ বডি : 46 পর্জন্ত।
+লং: 52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Stone Borka with Hijab"
+  data-price="১৬৪০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717663220_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 16/E-->
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717663220_S_1.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717663220_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Stone Borka with Hijab</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১৬৪০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Stone Borka with Hijab" data-price="১৬৪০" data-description="Premium Stone Borka with Hijab।
+														
+
+
+
+বোরকা সাথে থাকবে জিহাব।
+ফেব্রিক্সঃ দুবাই চেরি।
+ডিজাইনঃ স্টোন বসানো।
+কোয়ালিটিঃ প্রিমিয়াম।
+কালার গ্যারান্টি।
+সাইজ বডি : 46 পর্জন্ত।
+লং: 52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Stone Borka with Hijab"
+  data-price="১৬৪০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717663220_S_1.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+                                                    <!--Product 17/E-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717662422_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717662422_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Marjiya (Only Borka)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Marjiya (Only Borka)" data-price="১১৭০" data-description="Dubai Cherry Marjiya (Only Borka)।
+														
+
+
+
+
+Premium Quality Borka (Only borka no hijab)
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Marjiya (Only Borka)"
+  data-price="১১৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717662422_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+                                                    <!--Product 18/E-->
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717662421_S_1.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717662421_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Marjiya (Only Borka)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Marjiya (Only Borka)" data-price="১১৭০" data-description="Dubai Cherry Marjiya (Only Borka)।
+														
+
+
+
+
+Premium Quality Borka (Only borka no hijab)
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Marjiya (Only Borka)"
+  data-price="১১৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717662421_S_1.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 19/E-->
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717662156_S_3.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717662156_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Iqra (Only borka)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Marjiya (Only Borka)" data-price="১১৭০" data-description="Dubai Cherry Marjiya (Only Borka)।
+														
+
+
+
+
+Premium Quality Borka (Only borka no hijab)
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Marjiya (Only Borka)"
+  data-price="১১৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717662156_S_3.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 20/E-->
+
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717662156_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717662156_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Iqra (Only borka)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Marjiya (Only Borka)" data-price="১১৭০" data-description="Dubai Cherry Marjiya (Only Borka)।
+														
+
+
+
+
+Premium Quality Borka (Only borka no hijab)
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Marjiya (Only Borka)"
+  data-price="১১৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717662156_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+                                                    <!--Product 21/E-->
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717662156_S_1.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717662156_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Iqra (Only borka)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Marjiya (Only Borka)" data-price="১১৭০" data-description="Dubai Cherry Marjiya (Only Borka)।
+														
+
+
+
+
+Premium Quality Borka (Only borka no hijab)
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Marjiya (Only Borka)"
+  data-price="১১৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717662156_S_1.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+                                                    <!--Product 22/E-->
+
+
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717661726_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717661726_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Adiba (Only Borka)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১০৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Adiba (Only Borka)" data-price="১০৭০" data-description="Dubai Cherry Adiba (Only Borka)।
+														
+
+
+
+
+
+Premium Quality Borka (Only borka no hijab)।
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Adiba (Only Borka)"
+  data-price="১০৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717661726_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 23/E-->
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1717661726_S_1.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1717661726_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Dubai Cherry Adiba (Only Borka)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১০৭০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Dubai Cherry Adiba (Only Borka)" data-price="১০৭০" data-description="Dubai Cherry Adiba (Only Borka)।
+														
+
+
+
+
+
+Premium Quality Borka (Only borka no hijab)।
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Dubai Cherry Adiba (Only Borka)"
+  data-price="১০৭০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1717661726_S_1.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                    <!--Product 24/E-->
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_13.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_13.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Quality Borka (Only borka no hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১০০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Quality Borka (Only borka no hijab)" data-price="১১০০" data-description="Premium Quality Borka (Only borka no hijab)।
+														
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Quality Borka (Only borka no hijab)"
+  data-price="১১০০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_13.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                  <!--Product 25/E-->
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_12.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_12.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Quality Borka (Only borka no hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১০০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Quality Borka (Only borka no hijab)" data-price="১১০০" data-description="Premium Quality Borka (Only borka no hijab)।
+														
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Quality Borka (Only borka no hijab)"
+  data-price="১১০০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_12.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                  <!--Product 26/E-->
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_9.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_9.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Quality Borka (Only borka no hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১০০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Quality Borka (Only borka no hijab)" data-price="১১০০" data-description="Premium Quality Borka (Only borka no hijab)।
+														
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Quality Borka (Only borka no hijab)"
+  data-price="১১০০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_9.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                  <!--Product 27/E-->
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_5.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_5.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Quality Borka (Only borka no hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১০০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Quality Borka (Only borka no hijab)" data-price="১১০০" data-description="Premium Quality Borka (Only borka no hijab)।
+														
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Quality Borka (Only borka no hijab)"
+  data-price="১১০০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_5.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+                                                  <!--Product 28/E-->
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_4.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_4.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Quality Borka (Only borka no hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১০০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Quality Borka (Only borka no hijab)" data-price="১১০০" data-description="Premium Quality Borka (Only borka no hijab)।
+														
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Quality Borka (Only borka no hijab)"
+  data-price="১১০০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_4.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							                                                  <!--Product 29/E-->
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_3.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Quality Borka (Only borka no hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১০০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Quality Borka (Only borka no hijab)" data-price="১১০০" data-description="Premium Quality Borka (Only borka no hijab)।
+														
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Quality Borka (Only borka no hijab)"
+  data-price="১১০০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_3.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+                                                  <!--Product 30/E-->
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Quality Borka (Only borka no hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১০০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Quality Borka (Only borka no hijab)" data-price="১১০০" data-description="Premium Quality Borka (Only borka no hijab)।
+														
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Quality Borka (Only borka no hijab)"
+  data-price="১১০০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1714034907_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+                                                  <!--Product 31/E-->
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1714034906_S_1.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1714034906_S_1.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Quality Borka (Only borka no hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১০০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Quality Borka (Only borka no hijab)" data-price="১১০০" data-description="Premium Quality Borka (Only borka no hijab)।
+														
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Quality Borka (Only borka no hijab)"
+  data-price="১১০০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1714034906_S_1.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                  <!--Product 32/E-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1714026768_S_3.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1714026768_S_3.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Quality Borka (Only borka no hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১৪০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Quality Borka (Only borka no hijab)" data-price="১১৪০" data-description="Premium Quality Borka (Only borka no hijab)।
+
+
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Quality Borka (Only borka no hijab)"
+  data-price="১১৪০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1714026768_S_3.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+
+                                                  <!--Product 33/E-->
+
+
+
+
+
+
+														<div class="col-4 col-md-2 mb-0 product-column p-1">
+								<div class="product-part">
+									<div class="position-relative ProductimageContainer">
+										<a href="https://shopbasebd.com/public/uploads/shop/products/1714026768_S_2.jpg">
+											<img src="https://shopbasebd.com/public/uploads/shop/products/1714026768_S_2.jpg" class="img-fluid product-image" style="border-radius: 2px;">
+										</a>
+									</div>
+									<div class="pt-3">										
+																					<p class="mb-1 product-name"><a href="#">Premium Quality Borka (Only borka no hijab)</a></p>
+																				<div class="clearfix">
+											<table style="width:100%" class="product-price-table">
+												
+												<tr>
+													<td>প্রাইস</td><td class="text-danger price-td f-12" style="text-align:center;">১১৪০</td>													
+												</tr>												
+												<tr>													
+													<td colspan="2">
+														<button class="btn btn-sm btn-info w-100 pt-1 text-center pl-1 pr-1 custom-info-btn" style="width: 48%!important" data-name="Premium Quality Borka (Only borka no hijab)" data-price="১১৪০" data-description="Premium Quality Borka (Only borka no hijab)।
+
+
+Fabric: Dubai Cherry।
+Design: Embroidery।
+Size Available:
+52, 54, 56। ডেলিভারি চার্জ: ঢাকার ভিতরে ৭০ টাকা আর ঢাকার বাহিরে ১২০ টাকা।">Info</button>
+														
+														
+<button
+  class="btn btn-sm btn-light send-whatsapp"
+  data-id="19299"
+  data-name="Premium Quality Borka (Only borka no hijab)"
+  data-price="১১৪০"
+  data-image="https://shopbasebd.com/public/uploads/shop/products/1714026768_S_2.jpg"
+  style="
+    width: 48% !important;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#218838'"
+  onmouseout="this.style.backgroundColor='#28a745'"
+>
+  Order
+</button>
+																											</td>
+												</tr>
+
+
+												
+											</table>													
+										</div>
+									</div>
+								</div>
+							</div>
+												</div>
+				</div>
+
+                                                  <!--Product 34/E-->
+
+
+
+
+
+
+
+
+
+
+
+				<div class="col-md-12 text-center mt-2">
+					<div class="card p-3">
+						<div class="row">							
+							<div class="col-12 pt-2">
+																									<a class="btn btn-success" href="Borka 2.html">
+										<i class=""></i> Prev
+									</a>
+																									<button class="btn btn-success" disabled>Next <i class=""></i></button>
+																
+								
+							</div>
+							<div class="col-md-12 text-center pt-2">
+								Page 3 of 3
+							</div>							
+						</div>
+					</div>					
+				</div>
+				<div class="col-md-12 mt-3 d-none">
+										<nav aria-label="Page navigation example">
+						<ul class="pagination">
+							<li class="page-item">
+																	<a class="page-link" href="Borka 2.html" aria-label="Previous">
+										
+										<span class="sr-only">Previous</span>
+									</a>
+															</li>
+
+																<li class="page-item "><a class="page-link" href="Borka 1.html">1</a></li>
+																		<li class="page-item "><a class="page-link" href="Borka 2.html">2</a></li>
+																		<li class="page-item active"><a class="page-link" href="Borka 3.html">3</a></li>
+									
+							<li class="page-item">	
+																	<a disabled class="page-link" href="javascript:void(0)" aria-label="Next">
+									
+										<span class="sr-only">Next</span>
+									</a>			
+															</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-12 mt-5 mb-5"></div>
+			</div>
+		</div>
+	</div>    
+</div>
+	</main>
+	
+			
+
+
+
+
+                                    <!--Footer/Start-->
+
+
+									<footer class="site-footer foot-menu">
+										<div class="row">
+							
+							
+							
+											 <!--Home Icon/Start-->
+											<div class="col-3 foot-menu-item">
+												<a href="Baby Borka.html" class="">
+													<div style="display: flex; align-items: center; gap: 3px;">
+														<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8VHSNm0qntNFuD5S1suQRU1Ye0BUz1QpWfI1wTL_UzPXmoPCIRHBKNmNPx0Dj0-JUlHQ_btPJMVfwc4e-khBWcjqIOUwnceeYjFvKnZY2aQiwFLomY6dIuQIyYWOX_hyPODG6KBhYqbEz65LC2jh6sqXC50F8IfwXxekNzJ2sCl5N90bzZWBBZP5I5Fit/s1600/Baby%20Borka.png" alt="Home" style="width: 30px; height: 30px; margin-left: 20px; margin-top: 10px;"> বেবি বোরকা
+													
+													  </div>	  
+												</a>				
+											</div>	
+											 <!--Home Icon/End-->
+							
+							
+							
+											  <!--Facebook Icon/Start-->
+											 <div class="col-3 foot-menu-item">
+												<a href="Borka 1.html" style="display: flex; align-items: center; gap: 5px; text-decoration: none; color: inherit;">
+												  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTh6ylKPGD9OH_w1QDm2gTFWkF12TkZTXtbZCNXhaoPmJslWas7mfR2tvoBsb62UKwK8Wpozr5zqCKFOsLiK2gYI7MbY_GVJTrQXCc4MfwHj3PgTJtO8QDKbf7LV3fPsAzn6vEXGWexWlAVpansVTqipwoArbFhfkswou73qsloW0dYd_mSOPZOPN-iN8Z/s1600/Borka%20image.png" alt="Post" style="width: 30px; height: 30px; margin-left: 15px; margin-top: 10px;">বোরকা
+												</a>
+											  </div>
+											   <!--Facebook Icon/End-->
+							
+							
+							
+											   <!--Product Icon/Start-->
+											   <div class="col-3 foot-menu-item">
+												<a href="Hijab.html" class="active-mn" style="display: flex; align-items: center; gap: 3px; text-decoration: none; color: inherit;">
+												  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbQvRlxWelB13I3Cesx2pWBagLWo17zVehO1Q5BNVfaYjnodrXZJWOkdJJ2jLVpGSrA_MbEQpkLS3N1auilErrO3-eiR7Ks2i_BNgpvWwmbN8Rv_udoct9MNe2pf-J89f_NALaX9bUU6lF-OkrQushUy9SVupTiT1yavroOgZmvgAG3afrxVbIBfv0Nxii/s1600/Hijab%20&amp;%20Nikab.jpg" alt="প্রোডাক্ট" style="width: 30px; height: 30px; margin-left: 15px; margin-top: 10px;">হিজাব 
+												</a>
+											  </div>
+											   <!--Product Icon/End-->
+							
+							
+												<!--Inbox Icon/Start-->
+											   <div class="col-3 foot-menu-item">
+												<a href="Khimar.html" class="" style="display: flex; align-items: center; gap: 3px; text-decoration: none; color: inherit;"> 
+												  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgufhFrdmvsfCIp2PJupqt-abfrqIZ6OPuh5NN6Ud-6KpGYtyeafPtvpZtOe2baRzeyhJ2_NcLXNKLzEBBniGd93Vcsn_2EIEclSYxg7kfaUhCOuSYhoq18W09Juzdde_6Xo19EQ9OjiOkPpo0XZOD5et75_RiILvP0bF5tAsf1x3YxqaAH1ZeAbK-lf-Yi/s1600/Khimar.png" alt="ইনবক্স" style="width: 30px; height: 30px; margin-left: 15px; margin-top: 10px;"> খিমার
+												  </a>
+											  </div>
+												  <!--Inbox Icon/End-->
+							
+							
+														 <!--Footer/End-->
+							
+
+							
+							
+							
+							
+							
+							
+											<!-- <div class="col-3 foot-menu-item">
+												<a href="https://shopbasebd.com/store/products/search/image" class="">
+													<i class="fas fa-search"></i>
+													<p>সার্চ</p>
+												</a>				
+											</div>  -->
+							
+											<!-- <div class="col-3 foot-menu-item">
+												<a href="https://shopbasebd.com/store/video-post/all" class="">
+
+													<i class="fas fa-video"></i>
+													<p>ভিডিও</p>
+												</a>				
+											</div> -->
+											
+											<!-- <div class="col-3 foot-menu-item">
+												<a href="https://shopbasebd.com/store/products/favorite/1" class="">
+													<i class="far fa-heart"></i>
+													<p>ফেভরিট</p>
+												</a>				
+											</div> -->
+										<!-- <div class="col-3 foot-menu-item">
+											<a href="https://shopbasebd.com/store/orders" class="">
+												<i class="fa fa-bars"></i>
+												<p>অর্ডার</p>
+											</a>				
+										</div> -->
+										<!-- <div class="col-3 foot-menu-item">
+											<a href="https://shopbasebd.com/store/cart/checkout" class="">
+												<i class="fa fa-shopping-basket"></i>
+												<p>কার্ট <span class="cart_total_quantity_item">0</span></p>
+											</a>				
+										</div> -->
+							
+									</div>
+								</footer>
+							
+							<script src="https://shopbasebd.com/public/assets/store/vendors/jquery/jquery-3.3.1.min.js"></script>
+							<script src="https://shopbasebd.com/public/assets/store/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+							<script src="https://shopbasebd.com/public/assets/store/vendors/slimscroll/jquery.slimscroll.min.js"></script> 
+							<script src="https://shopbasebd.com/public/assets/store/js/app.js"></script> 
+							<script src="https://shopbasebd.com/public/assets/store/vendors/toastr/toastr.min.js"></script>
+							<script src="https://shopbasebd.com/public/assets/store/vendors/toastr/toastr.script.js"></script>
+							<script type="text/javascript">	
+								$(document).on('click', '.favorite', function() 
+								{ 
+									var id = $(this).attr("data-id");
+									var type = $(this).attr("data-type");
+									$.get('https://shopbasebd.com/store/addToFavorite/'+id+'/'+type, function(data) {
+										if(type==1){
+											toastr.success("Added to favorite list");
+										}else{
+											toastr.warning("Removed from favorite list");
+										}								
+										setTimeout(function(){ 
+											location.reload();
+										}, 500);
+									});
+								});	
+							
+								document.addEventListener("DOMContentLoaded", function () {
+									const images = document.querySelectorAll(".product-image");
+							
+									function checkVisibility() {
+										images.forEach((img) => {
+											const rect = img.getBoundingClientRect();
+											if (rect.top < window.innerHeight && rect.bottom > 0) {
+												img.classList.add("in-view");
+											}
+										});
+									}
+							
+									window.addEventListener("scroll", checkVisibility);
+									checkVisibility(); 
+								});
+							</script>
+							<script type="text/javascript">
+									/*$(document).ready(function() { 
+										$(".multiple").select2({
+											multiple:true,
+											placeholder: "Select one"
+										});
+									});*/
+								$("#success-message").hide();
+								$("#warning-message").hide();
+								load_cart_data();
+								function load_cart_data(){
+									$.get("https://shopbasebd.com/store/cart/load/info", function(data) {
+										var data = $.parseJSON(data);
+										$('.cart_total_quantity_item').text(data.total_item);
+										$('.cart_total_amount').text(data.cart_total_amount);
+										$('.side_cart_items').html(data.item_list);
+									});
+								}
+							</script>
+							
+							
+							<script>
+								document.addEventListener("DOMContentLoaded", function () {
+								  const buttons = document.querySelectorAll(".send-whatsapp");
+							  
+								  buttons.forEach(function (button) {
+									button.addEventListener("click", function () {
+									  const name = this.getAttribute("data-name");
+									  const price = this.getAttribute("data-price");
+									  const image = this.getAttribute("data-image");
+							  
+									  const message = `🛍️ প্রোডাক্ট অর্ডার করতে চাই\n\n📦 প্রোডাক্ট: ${name}\n💰 প্রাইস: ${price} টাকা\n🖼️ ছবি: ${image}`;
+							  
+									  const whatsappNumber = "01879990679";
+									  const whatsappUrl = `https://wa.me/88${whatsappNumber}?text=${encodeURIComponent(message)}`;
+							  
+									  window.open(whatsappUrl, '_blank');
+									});
+								  });
+								});
+							  </script>
+							  
+							
+							
+							  <div class="custom-modal-overlay" id="customModal">
+								<div class="custom-modal-content">
+								  <button class="custom-modal-close" id="customModalClose">X</button>
+								  <h5 id="modalProductName"></h5>
+								  <p id="modalProductPrice"></p>
+								  <p id="modalProductDescription"></p>
+								</div>
+							  </div>
+							  
+							
+							  <script>
+								(function () {
+								  document.addEventListener("DOMContentLoaded", function () {
+									const infoButtons = document.querySelectorAll('.custom-info-btn');
+									const modal = document.getElementById('customModal');
+									const closeModal = document.getElementById('customModalClose');
+								
+									const nameBox = document.getElementById('modalProductName');
+									const priceBox = document.getElementById('modalProductPrice');
+									const descBox = document.getElementById('modalProductDescription');
+								
+									infoButtons.forEach(btn => {
+									  btn.addEventListener('click', () => {
+										nameBox.textContent = btn.getAttribute('data-name');
+										priceBox.textContent = 'প্রাইস: ' + btn.getAttribute('data-price') + ' টাকা';
+										descBox.textContent = btn.getAttribute('data-description');
+										modal.style.display = 'flex';
+									  });
+									});
+								
+									closeModal.addEventListener('click', () => {
+									  modal.style.display = 'none';
+									});
+								
+									window.addEventListener('click', function (e) {
+									  if (e.target === modal) {
+										modal.style.display = 'none';
+									  }
+									});
+								  });
+								})();
+								</script>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							<!--Chat Icon/Start-->
+							
+							
+							<div class="chat-icons">
+								<a href="tel:+8801879990679" title="Call Us"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtx9x505OjxYoCNaMliZawri1CTM5b-D5EI34YALxAw8IohfXJO4k22LYeI6bLAcd-LrToSD_emUHAqeSl_MrDgvxK1YBiyb_SMQ8bt64VFlcV5uP6KZ0euU9JB4t_zut_p29QK0LZcezuHL83Id_n6d8JzDiJXVekkhfT1Lzmg_eXG2xnYWq-QXgTf5RO/s1600/C-Icon.png" alt="Call"></a>
+								<a href="https://wa.me/8801879990679" target="_blank" title="WhatsApp"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoRLeSdoXxtXGnHttuXtXC2aHgINtn2vvZcMEVfNNF8x99M0WAY-iP5XoF1vnhHZTQl_Z8ZGSIti8oQqVyWWyrIoVvlmi7nyqwszh58WampvdSONkFvvIbDK7kRlLu0P8xV0DrU77ZlAfHRivgJgGGN6l9MmmOJmk8-405jKIRrtcdyBMyDSWQVgy0grVF/s1600/W-icon.png" alt="WhatsApp"></a>
+								<a href="https://m.me/440595169132134" target="_blank" title="Messenger"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj017RRNdY3hBeFN-9q8iygaGFIMEwPmd8jisuyQVx8bvyasLOtHtkhnX9aBcdZCcz0HShBzv8sAm-vshpXoLBjS59BLcGJHtZyNn7IbIBqZ8Gqp6BJ9I1KNBYkvm3A-_h-ycaWT6t1OphieTIpoo9TjrxyV2PtLO-ku-xIuFYchWbQDwihF8B-1dfInXxY/s1600/M-Icon.png" alt="Messenger"></a>
+							</div>
+							
+							<!--Chat Icon/End-->
+							
+							
+							
+							
+							
+							
+							
+							</body>
+							</html>
